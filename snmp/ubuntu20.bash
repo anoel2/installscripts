@@ -1,4 +1,9 @@
 #!/bin/bash
+# Check if script is being run as root
+if [ $(id -u) -ne 0 ]; then
+    echo "This script must be run as root"
+    exit 1
+fi
 
 authpass=""
 cryptopass=""
