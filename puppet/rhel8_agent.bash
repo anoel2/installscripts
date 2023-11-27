@@ -10,7 +10,7 @@ puppetserverip=""
 
 
 rpm -Uvh https://yum.puppet.com/puppet7-release-el-8.noarch.rpm
-yum install puppet-agent -y
+yum install puppet puppet-agent -y
 source /etc/profile.d/puppet-agent.sh
 puppet config set server $puppetserver --section main
 puppet ssl bootstrap
